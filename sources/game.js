@@ -30,6 +30,32 @@ playRound(playerSelection, computerSelection) {
     if(playerSelection === computerSelection) {
         return `Tie : both chose ${playerSelection}`;
     }
+
+    if(playerSelction === "ROCK") {
+        if(computerSelection === "SCISSORS") {
+            return "You win! ROCK beats SCISSORS";
+        } else {
+            return "You loose! PAPER beats ROCK";
+        }
+    }
+
+    if(playerSelction === "PAPER") {
+        if(computerSelection === "ROCK") {
+            return "You win! PAPER beats ROCK";
+        } else {
+            return "You loose! SCISSORS beats PAPER";
+        }
+    }
+
+    if(playerSelction === "SCISSORS") {
+        if(computerSelection === "PAPER") {
+            return "You win! SCISSORS beats PAPER";
+        } else {
+            return "You loose! ROCK beats PAPER";
+        }
+    }
+
+    return "Invalid input - please try again\n";
 }
 
 
