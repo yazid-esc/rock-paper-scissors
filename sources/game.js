@@ -58,7 +58,7 @@ function playRound(playerSelection, computerSelection) {
         if(computerSelection === "PAPER") {
             return "You win! SCISSORS beats PAPER";
         } else {
-            return "You loose! ROCK beats PAPER";
+            return "You loose! ROCK beats SCISSORS";
         }
     }
 
@@ -75,7 +75,7 @@ console.log("EXPECTED: Loose : ROCK , PAPER");
 
 console.log(playRound("ROCK", "SCISSORS"));
 console.log("EXPECTED: Win : ROCK , SCISSORS");
-
+console.log("----------------------------------------------------------------\n\n");
 
 
 
@@ -87,7 +87,7 @@ console.log("EXPECTED: Tie : PAPER , PAPER");
 
 console.log(playRound("PAPER", "SCISSORS"));
 console.log("EXPECTED: Loose : PAPER , SCISSORS");
-
+console.log("----------------------------------------------------------------\n\n");
 
 
 
@@ -99,3 +99,4 @@ console.log("EXPECTED: Win : SCISSORS , PAPER");
 
 console.log(playRound("SCISSORS", "SCISSORS"));
 console.log("EXPECTED: Tie : SCISSORS , SCISSORS");
+console.log("----------------------------------------------------------------\n\n");
