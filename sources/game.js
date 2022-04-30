@@ -26,6 +26,13 @@ function computerPlay() {
 playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toUpperCase();
 
+    // TEST CODE: Comment out when done
+    {
+        console.log("You: " + playerSelection);
+        console.log("Computer: " + computerSelection);
+        console.log("-------------------------------\n")
+    }
+    
     // Check case: Selectoins are the same
     if(playerSelection === computerSelection) {
         return `Tie : both chose ${playerSelection}`;
