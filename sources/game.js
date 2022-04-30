@@ -46,7 +46,7 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 
-    if(playerSelction === "PAPER") {
+    if(playerSelection === "PAPER") {
         if(computerSelection === "ROCK") {
             return "You win! PAPER beats ROCK";
         } else {
@@ -54,7 +54,7 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 
-    if(playerSelction === "SCISSORS") {
+    if(playerSelection === "SCISSORS") {
         if(computerSelection === "PAPER") {
             return "You win! SCISSORS beats PAPER";
         } else {
