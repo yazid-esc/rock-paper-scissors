@@ -23,7 +23,7 @@ function computerPlay() {
 
 }
 
-playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toUpperCase();
 
     // TEST CODE: Comment out when done
@@ -67,25 +67,35 @@ playRound(playerSelection, computerSelection) {
 
 
 
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
-// console.log(computerPlay());
+console.log(playRound("ROCK", "ROCK"));
+console.log("EXPECTED: Tie : ROCK , ROCK");
+
+console.log(playRound("ROCK", "PAPER"));
+console.log("EXPECTED: Loose : ROCK , PAPER");
+
+console.log(playRound("ROCK", "SCISSORS"));
+console.log("EXPECTED: Win : ROCK , SCISSORS");
+
+
+
+
+console.log(playRound("PAPER", "ROCK"));
+console.log("EXPECTED: Win : PAPER , ROCK");
+
+console.log(playRound("PAPER", "PAPER"));
+console.log("EXPECTED: Tie : PAPER , PAPER");
+
+console.log(playRound("PAPER", "SCISSORS"));
+console.log("EXPECTED: Loose : PAPER , SCISSORS");
+
+
+
+
+console.log(playRound("SCISSORS", "ROCK"));
+console.log("EXPECTED: Loose : SCISSORS , ROCK");
+
+console.log(playRound("SCISSORS", "PAPER"));
+console.log("EXPECTED: Win : SCISSORS , PAPER");
+
+console.log(playRound("SCISSORS", "SCISSORS"));
+console.log("EXPECTED: Tie : SCISSORS , SCISSORS");
