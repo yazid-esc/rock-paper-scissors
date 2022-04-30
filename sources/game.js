@@ -1,8 +1,36 @@
 
 
-
+game();
 
 // FUNCTIONS
+
+function game() {
+    let userWins;
+    let computerWins;
+
+    for(let i = 0; i < 5; ++i) {
+        // Get user input
+        let userChoice = prompt("Please enter ROCK, PAPER, or SCISSORS\n>>  ");
+        let result = playRound(userChoice, computerPlay());
+
+        console.log(result);
+        if(result === "Invalid input - please try again") {
+            --i;
+        } else {
+            if(result.includes("win")) {
+                ++userWins;
+            } else {
+                ++computerWins;
+            }
+        }
+    }
+
+    if(userWins > computerWins) {
+        console.log("You win!");
+    } else {
+        console.log("Computer wins!");
+    }
+}
 
 function computerPlay() {
     let getRandomInteger = function() {
@@ -27,11 +55,11 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toUpperCase();
 
     // TEST CODE: Comment out when done
-    {
-        console.log("You: " + playerSelection);
-        console.log("Computer: " + computerSelection);
-        console.log("-------------------------------\n")
-    }
+    // {
+    //     console.log("You: " + playerSelection);
+    //     console.log("Computer: " + computerSelection);
+    //     console.log("-------------------------------\n")
+    // }
     
     // Check case: Selectoins are the same
     if(playerSelection === computerSelection) {
@@ -67,36 +95,36 @@ function playRound(playerSelection, computerSelection) {
 
 
 
-console.log(playRound("ROCK", "ROCK"));
-console.log("EXPECTED: Tie : ROCK , ROCK");
+// console.log(playRound("ROCK", "ROCK"));
+// console.log("EXPECTED: Tie : ROCK , ROCK");
 
-console.log(playRound("ROCK", "PAPER"));
-console.log("EXPECTED: Loose : ROCK , PAPER");
+// console.log(playRound("ROCK", "PAPER"));
+// console.log("EXPECTED: Loose : ROCK , PAPER");
 
-console.log(playRound("ROCK", "SCISSORS"));
-console.log("EXPECTED: Win : ROCK , SCISSORS");
-console.log("----------------------------------------------------------------\n\n");
-
-
-
-console.log(playRound("PAPER", "ROCK"));
-console.log("EXPECTED: Win : PAPER , ROCK");
-
-console.log(playRound("PAPER", "PAPER"));
-console.log("EXPECTED: Tie : PAPER , PAPER");
-
-console.log(playRound("PAPER", "SCISSORS"));
-console.log("EXPECTED: Loose : PAPER , SCISSORS");
-console.log("----------------------------------------------------------------\n\n");
+// console.log(playRound("ROCK", "SCISSORS"));
+// console.log("EXPECTED: Win : ROCK , SCISSORS");
+// console.log("----------------------------------------------------------------\n\n");
 
 
 
-console.log(playRound("SCISSORS", "ROCK"));
-console.log("EXPECTED: Loose : SCISSORS , ROCK");
+// console.log(playRound("PAPER", "ROCK"));
+// console.log("EXPECTED: Win : PAPER , ROCK");
 
-console.log(playRound("SCISSORS", "PAPER"));
-console.log("EXPECTED: Win : SCISSORS , PAPER");
+// console.log(playRound("PAPER", "PAPER"));
+// console.log("EXPECTED: Tie : PAPER , PAPER");
 
-console.log(playRound("SCISSORS", "SCISSORS"));
-console.log("EXPECTED: Tie : SCISSORS , SCISSORS");
-console.log("----------------------------------------------------------------\n\n");
+// console.log(playRound("PAPER", "SCISSORS"));
+// console.log("EXPECTED: Loose : PAPER , SCISSORS");
+// console.log("----------------------------------------------------------------\n\n");
+
+
+
+// console.log(playRound("SCISSORS", "ROCK"));
+// console.log("EXPECTED: Loose : SCISSORS , ROCK");
+
+// console.log(playRound("SCISSORS", "PAPER"));
+// console.log("EXPECTED: Win : SCISSORS , PAPER");
+
+// console.log(playRound("SCISSORS", "SCISSORS"));
+// console.log("EXPECTED: Tie : SCISSORS , SCISSORS");
+// console.log("----------------------------------------------------------------\n\n");
