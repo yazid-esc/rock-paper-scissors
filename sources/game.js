@@ -38,7 +38,7 @@ function playRound(playerSelection, computerSelection) {
         return `Tie : both chose ${playerSelection}`;
     }
 
-    if(playerSelction === "ROCK") {
+    if(playerSelection === "ROCK") {
         if(computerSelection === "SCISSORS") {
             return "You win! ROCK beats SCISSORS";
         } else {
